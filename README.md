@@ -37,3 +37,11 @@ The final output should be a GitHub repository containing:
 - The complete code for the SPA.
 - A README.md file explaining how to install and run the application.
 - Documentation within the code explaining any important decisions and any challenges you faced.
+
+---
+
+#### Resources used
+
+- https://www.mockaroo.com/
+- https://my-json-server.typicode.com/
+- https://codesandbox.io/s/three-fiber-point-cloud-6q2wh
