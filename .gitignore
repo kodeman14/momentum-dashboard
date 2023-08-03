@@ -19,4 +19,10 @@ yarn-error.log*
 # misc
 .DS_Store
 .env
-mom-dash
+
+# others
+mom-dash/
+pcd-info/
+pcd-utils/
+Test.js
+MOCK_DATA.json
