@@ -1,5 +1,15 @@
 # MOMENTUM PATIENT INFORMATION DASHBOARD
 
+Directions
+
+1. [Assignment Details](#assignment)
+2. [Running App](#running-app)
+3. [Decisions Made](#decisions-made)
+4. [Resources Used](#resources-used)
+5. [Future Plans](#future-plans)
+
+---
+
 ## Assignment
 
 Building a Basic Patient Information Dashboard with a 3D Visualizer
@@ -40,17 +50,40 @@ The final output should be a GitHub repository containing:
 
 ---
 
-#### Resources used
+## Running App
 
-- https://www.mockaroo.com/
-- https://geoslam.com/sample-data/
-- https://my-json-server.typicode.com/
-- https://github.com/coopercodes/3DModelShowcase
-- https://codesandbox.io/s/three-fiber-point-cloud-6q2wh
-- https://www.smashingmagazine.com/2020/11/threejs-react-three-fiber/
+- app built using react and threejs
+- run `npm install`, then `npm start`
+- user list visible as individual cards
+- can see user info like name, age, gender
+- icons to see status, can refresh status
+- when refreshing, other buttons are paused
+- visual model button opens 3d model dialog
+- can close dialog and view different user
+
+## Decisions Made
+
+- tried to use PCD, but very hard to find sample data
+- ended up using 3d model glb files, lots of options
+- most time spent in finding relevant visible models
+- didn't have enough time to add in zooming controls
+- used tailwind to create simple and responsive cards
+- loaded 2 models to see which ones i can use regularly
+- tried using more models, but it wasn't clear enough
+
+## Resources Used
+
+- https://www.mockaroo.com/ (for creating fake data sets of users)
+- https://sketchfab.com/tags/glb (used this site to get new models)
+- https://geoslam.com/sample-data/ (pcd files in different formats)
+- https://my-json-server.typicode.com/ (live server to host database)
+- https://github.com/coopercodes/3DModelShowcase (repo to render 3d model)
+- https://codesandbox.io/s/three-fiber-point-cloud-6q2wh (sandbox on fiber)
+- https://www.smashingmagazine.com/2020/11/threejs-react-three-fiber/ (blog)
+- https://dev.to/maniflames/pointcloud-effect-in-three-js-3eic (pcd blog)
 - https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/modals/regular
 
-#### Future dev plans
+## Future Plans
 
 - add pagination on list
 - use my own live server
@@ -58,3 +91,6 @@ The final output should be a GitHub repository containing:
 - need relevant pcd sets
 - create actual user data
 - render different models
+- orbit controls for views
+- see which user was open
+- persist on click/update

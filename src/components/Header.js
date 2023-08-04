@@ -6,13 +6,13 @@ function Header() {
     <div className="flex flex-row text-center justify-between bg-yellow-500 p-5">
       <span className="flex">
         <button>
-          <FcBiotech className="align-middle" />
+          <FcBiotech className="align-middle" size="40px" />
         </button>
       </span>
       <h1 className="font-bold text-3xl mx-5">Patient Dashboard</h1>
       <span className="flex">
         <button>
-          <FcMenu className="align-middle" />
+          <FcMenu className="align-middle" size="40px" />
         </button>
       </span>
     </div>
