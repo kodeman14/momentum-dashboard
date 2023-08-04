@@ -26,5 +26,32 @@ function UserList({ userData, setIsRefresh }) {
             </span>
           </div>
           <hr className="border-black border-dashed" />
+          <div className="flex flex-row">
+                <div className="flex flex-col col-span-8">
+                  <span className="flex">
+                    Video Status:&nbsp;
+                    {user.videoUploadStatus ? (
+                      <button>
+                        <FcApproval className="align-middle" />
+                      </button>
+                    ) : (
+                      <button>
+                        <FcCancel className="align-middle" />
+                      </button>
+                    )}
+                  </span>
+                  <span className="flex">
+                    Scolio Status:&nbsp;
+                    {user.scoliosisPredictionStatus ? (
+                      <button>
+                        <FcApproval className="align-middle" />
+                      </button>
+                    ) : (
+                      <button>
+                        <FcCancel className="align-middle" />
+                      </button>
+                    )}
+                  </span>
+                </div>
         </div>
       ))}
