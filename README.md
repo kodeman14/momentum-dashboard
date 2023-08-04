@@ -74,11 +74,13 @@ The final output should be a GitHub repository containing:
 ## Resources Used
 
 - https://www.mockaroo.com/ (for creating fake data sets of users)
+- https://sketchfab.com/tags/glb (used this site to get new models)
 - https://geoslam.com/sample-data/ (pcd files in different formats)
 - https://my-json-server.typicode.com/ (live server to host database)
 - https://github.com/coopercodes/3DModelShowcase (repo to render 3d model)
 - https://codesandbox.io/s/three-fiber-point-cloud-6q2wh (sandbox on fiber)
-- https://www.smashingmagazine.com/2020/11/threejs-react-three-fiber/
+- https://www.smashingmagazine.com/2020/11/threejs-react-three-fiber/ (blog)
+- https://dev.to/maniflames/pointcloud-effect-in-three-js-3eic (pcd blog)
 - https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/modals/regular
 
 ## Future Plans
