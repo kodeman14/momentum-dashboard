@@ -68,6 +68,7 @@ function UserList({ userData, setIsRefresh }) {
             </span>
           </div>
           <hr className="border-black border-dashed" />
+          {/* TODO : move this to new component */}
           <div className="flex flex-row">
             {isLoading && userId === user.id ? (
               <p className="my-5 mx-2 text-green-500">Fetching Latest.....</p>
@@ -108,7 +109,7 @@ function UserList({ userData, setIsRefresh }) {
                     className="m-auto rounded-2xl border-2 border-black p-1 bg-white"
                     disabled={isLoading}
                     onClick={() => handleRefresh(user)}>
-                    <FcSynchronize className="align-middle" />
+                    <FcSynchronize className="align-middle" size="20px" />
                   </button>
                 </div>
               </div>
