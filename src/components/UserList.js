@@ -54,7 +54,7 @@ function UserList({ userData, setIsRefresh }) {
     <div className="flex flex-wrap justify-center w-3/4 mx-auto">
       {userData?.map((user) => (
         <div
-          className="flex flex-col bg-gray-200 rounded-lg shadow-md m-6 w-50 overflow-hidden border-2 border-yellow-500"
+          className="flex flex-col bg-gray-200 rounded-lg shadow-md m-6 overflow-hidden border-2 border-yellow-500 w-full sm:w-52"
           key={user.id}>
           <h2 className="text-center px-2 pb-2 font-semibold text-lg">
             {user.name}
@@ -69,11 +69,11 @@ function UserList({ userData, setIsRefresh }) {
           </div>
           <hr className="border-black border-dashed" />
           {/* TODO : move this to new component */}
-          <div className="flex flex-row">
+          <div className="flex flex-row justify-center">
             {isLoading && userId === user.id ? (
-              <p className="my-5 mx-2 text-green-500">Fetching Latest.....</p>
+              <p className="my-5 text-green-500">Fetching Latest.....</p>
             ) : fetchErr && userId === user.id ? (
-              <span className="my-2 px-4 text-red-600 font-bold">
+              <span className="my-2 px-5 text-red-600 font-bold">
                 Error Loading New Data, Try Again Later
               </span>
             ) : (
