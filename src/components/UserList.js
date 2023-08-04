@@ -8,6 +8,40 @@ function UserList({ userData, setIsRefresh }) {
   const [isLoading, setIsLoading] = useState(false);
   const [fetchErr, setFetchErr] = useState();
   const [modalOpen, setModalOpen] = useState(false);
+
+  const handleRefresh = (user) => {
+    setIsLoading(true);
+    const payload = {
+      ...user,
+      videoUploadStatus: Math.random() < 0.5,
+      scoliosisPredictionStatus: Math.random() > 0.5,
+    };
+    setUserId(user.id);
+    fetch(`${serverApi}/users/${user.id}`, {
+      method: "PUT",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setIsRefresh(true);
+        setTimeout(() => setIsLoading(false), 2000);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        setFetchErr(err);
+      });
+
+    console.log("fetching new info for :", user.name);
+  };
+
   return (
     <div className="flex flex-wrap justify-center w-3/4 mx-auto">
       {userData?.map((user) => (
