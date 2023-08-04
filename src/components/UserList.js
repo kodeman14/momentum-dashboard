@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import { FcApproval, FcCancel, FcSynchronize } from "react-icons/fc";
 import { serverApi } from "../utils/config";
+import Dialog from "./helpers/Dialog";
 
 function UserList({ userData, setIsRefresh }) {
   const [userId, setUserId] = useState();
   const [userInfo, setUserInfo] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [fetchErr, setFetchErr] = useState();
-  // const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleVisualClick = (user) => {
+    console.log("opening pcd info for :", user.name);
+
+    setModalOpen(true);
+    setUserInfo(user);
+  };
 
   const handleRefresh = (user) => {
     setIsLoading(true);
@@ -106,8 +114,14 @@ function UserList({ userData, setIsRefresh }) {
               </div>
             )}
           </div>
+          <button
+            className="bg-blue-500 text-white p-3 text-center hover:bg-blue-800 transition-all duration-500"
+            onClick={() => handleVisualClick(user)}>
+            Visual Model
+          </button>
         </div>
       ))}
+      {modalOpen && <Dialog userInfo={userInfo} setModalOpen={setModalOpen} />}
     </div>
   );
 }

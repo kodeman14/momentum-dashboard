@@ -20,6 +20,12 @@ function App() {
   useEffect(() => {
     handleFetchData();
   }, []);
+
+  // useEffect(() => {
+  //   isRefresh && handleFetchData();
+  //   setIsRefresh(false);
+  // }, [isRefresh]);
+
   return (
     <div className="App">
       <Header />
@@ -27,6 +33,7 @@ function App() {
         <span>Display Error, Fetch Again</span>
       ) : (
         <UserList userData={userData} />
+        // setIsRefresh={setIsRefresh} />
       )}
     </div>
   );
