@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FcApproval, FcCancel, FcSynchronize } from "react-icons/fc";
 import { serverApi } from "../utils/config";
+import Dialog from "./helpers/Dialog";
 
 function UserList({ userData, setIsRefresh }) {
   const [userId, setUserId] = useState();
@@ -120,6 +121,7 @@ function UserList({ userData, setIsRefresh }) {
           </button>
         </div>
       ))}
+      {modalOpen && <Dialog userInfo={userInfo} setModalOpen={setModalOpen} />}
     </div>
   );
 }
