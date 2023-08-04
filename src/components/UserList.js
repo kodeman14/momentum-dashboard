@@ -7,7 +7,7 @@ function UserList({ userData, setIsRefresh }) {
   const [userInfo, setUserInfo] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [fetchErr, setFetchErr] = useState();
-  const [modalOpen, setModalOpen] = useState(false);
+  // const [modalOpen, setModalOpen] = useState(false);
 
   const handleRefresh = (user) => {
     setIsLoading(true);
@@ -61,6 +61,13 @@ function UserList({ userData, setIsRefresh }) {
           </div>
           <hr className="border-black border-dashed" />
           <div className="flex flex-row">
+            {isLoading && userId === user.id ? (
+              <p className="my-5 mx-2 text-green-500">Fetching Latest.....</p>
+            ) : fetchErr && userId === user.id ? (
+              <span className="my-2 px-4 text-red-600 font-bold">
+                Error Loading New Data, Try Again Later
+              </span>
+            ) : (
               <div className="grid grid-rows-1 text-center grid-cols-12 my-2 px-3">
                 <div className="flex flex-col col-span-8">
                   <span className="flex">
@@ -97,5 +104,12 @@ function UserList({ userData, setIsRefresh }) {
                   </button>
                 </div>
               </div>
+            )}
+          </div>
         </div>
       ))}
+    </div>
+  );
+}
+
+export default UserList;
