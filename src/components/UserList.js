@@ -17,5 +17,14 @@ function UserList({ userData, setIsRefresh }) {
           <h2 className="text-center px-2 pb-2 font-semibold text-lg">
             {user.name}
           </h2>
+          <div className="flex flex-col my-2">
+            <span>
+              <u>Age</u>: {user.age} years
+            </span>
+            <span>
+              <u>Gender</u>: {user.gender}
+            </span>
+          </div>
+          <hr className="border-black border-dashed" />
         </div>
       ))}
