@@ -43,5 +43,18 @@ The final output should be a GitHub repository containing:
 #### Resources used
 
 - https://www.mockaroo.com/
+- https://geoslam.com/sample-data/
 - https://my-json-server.typicode.com/
+- https://github.com/coopercodes/3DModelShowcase
 - https://codesandbox.io/s/three-fiber-point-cloud-6q2wh
+- https://www.smashingmagazine.com/2020/11/threejs-react-three-fiber/
+- https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/modals/regular
+
+#### Future dev plans
+
+- add pagination on list
+- use my own live server
+- accordion to hide info
+- need relevant pcd sets
+- create actual user data
+- render different models
