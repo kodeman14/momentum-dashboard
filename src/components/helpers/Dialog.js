@@ -8,6 +8,9 @@ function Dialog({ userInfo, setModalOpen }) {
         <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
           <h3 className="text-2xl font-semibold">Model for {userInfo.name}</h3>
         </div>
+        <div className="relative p-6 flex-auto">
+          <Visualizing />
+        </div>
         <div className="flex items-center justify-end p-3 border-t border-solid border-slate-200 rounded-b">
           <button
             className="bg-green-700 text-white font-bold uppercase text-sm px-3 py-3 rounded shadow outline-none mr-1"

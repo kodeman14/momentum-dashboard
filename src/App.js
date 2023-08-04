@@ -8,7 +8,7 @@ import Header from "./components/Header";
 function App() {
   const [userData, setUserData] = useState();
   const [serverErr, setServerErr] = useState();
-  // const [isRefresh, setIsRefresh] = useState(false);
+  const [isRefresh, setIsRefresh] = useState(false);
 
   const handleFetchData = () => {
     fetch(`${serverApi}/users`)
@@ -20,13 +20,19 @@ function App() {
   useEffect(() => {
     handleFetchData();
   }, []);
+
+  useEffect(() => {
+    isRefresh && handleFetchData();
+    setIsRefresh(false);
+  }, [isRefresh]);
+
   return (
     <div className="App">
       <Header />
       {serverErr ? (
         <span>Display Error, Fetch Again</span>
       ) : (
-        <UserList userData={userData} />
+        <UserList userData={userData} setIsRefresh={setIsRefresh} />
       )}
     </div>
   );
