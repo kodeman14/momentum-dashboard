@@ -61,6 +61,7 @@ function UserList({ userData, setIsRefresh }) {
           </div>
           <hr className="border-black border-dashed" />
           <div className="flex flex-row">
+              <div className="grid grid-rows-1 text-center grid-cols-12 my-2 px-3">
                 <div className="flex flex-col col-span-8">
                   <span className="flex">
                     Video Status:&nbsp;
@@ -87,5 +88,14 @@ function UserList({ userData, setIsRefresh }) {
                     )}
                   </span>
                 </div>
+                <div className="flex col-span-4">
+                  <button
+                    className="m-auto rounded-2xl border-2 border-black p-1 bg-white"
+                    disabled={isLoading}
+                    onClick={() => handleRefresh(user)}>
+                    <FcSynchronize className="align-middle" />
+                  </button>
+                </div>
+              </div>
         </div>
       ))}
